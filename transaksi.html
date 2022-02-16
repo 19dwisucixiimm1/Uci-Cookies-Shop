@@ -1,0 +1,147 @@
+<html> 
+	<head>
+	<meta charset="utf-8">
+		 <title>Uci Cookies</title>
+		  <link rel="stylesheet"href="styletransaksi.css">
+	</head>
+	<body>
+		<div class="kop">
+			<marquee direction="right">Welcome to Our Cookies Shop</marquee>
+		</div>
+		<div class="header">
+			<div class="header-logo1"><img height="70" src="https://drive.google.com/uc?export=view&id=1x9GaZI0TTS0BarB0obeBkvPL9kP6OctC" width : "70"></div>
+			<div class="header-logo2">Uci</div>
+			<div class="header-list">
+				<ul>
+					<li><a href="uci cookies.html" style="color:#b98e63">Home</a></li>
+					<li><a href= "produk.html" style="color:#b98e63">Produk</a></li>
+					<li>Transaksi</li>
+					<li><a href="kontak.html" style="color:#b98e63">Kontak</a></li>
+				</ul>
+			</div>
+		</div>
+
+<head>
+		<div class="content-form">
+		<style type="text/css">
+			button {
+				width: 100%;
+				height: 40px;
+				background-color: #B39377;
+				border: 1px;
+				color: #2F210D;
+				padding: 10px;
+				font-size: 16px;
+				cursor: pointer;
+				align: center;
+				font-family: comic sans;
+					}
+		</div>		
+		</style>
+</head>
+<center>
+	<table border="1px" width="600px">
+	<tr>
+		<th bgcolor="#f5f5dc" colspan="2"> PERHITUNGAN BELANJA</th>
+	</tr>
+	<tr>
+		<th align="center" colspan="2">Uci Cookies</th>
+	</tr>
+	<tr>
+		<td>Nama Barang:</td>
+		<td><input type="text" id="ipt_namaBarang"></td>
+	</tr>
+	<tr>
+		<td>Harga Barang:</td>
+		<td><input type="text" id="ipt_hargaBarang"></td>
+	</tr>
+	<tr>
+		<td>Jumlah Barang:</td>
+		<td><input type="text" id="ipt_jumlahBarang"></td>
+	</tr>
+	<tr>
+		<td>Diskon:</td>
+		<td><input type="text" id="ipt_diskon"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><button onclick="hitung()">Hitung</button></td>
+	</tr>
+	<tr>
+	<th bgcolor="#f5f5dc" colspan="2">MARI BELANJA</th>
+	</tr>
+	<tr>
+	<th align="center" colspan="2">Uci Cookies</th>
+	</tr>
+	<tr>
+		<td >Nama Barang:</td>
+		<td><input type="text" id="opt_namaBarang" disabled></td>
+	</tr>
+	<tr>
+		<td>Harga Barang:</td>
+		<td><input type="text" id="opt_hargaBarang" disabled></td>
+	</tr>
+	<tr>
+		<td>Jumlah Barang:</td>
+		<td><input type="text" id="opt_jumlahBarang" disabled></td>
+	</tr>
+	<tr>
+		<td>Diskon:</td>
+		<td><input type="text" id="opt_diskon" disabled></td>
+	</tr>
+	<tr>
+		<td>TOTAL HARGA:</td>
+		<td><input type="text" id="opt_totalHarga" disabled></td>
+	</tr>
+	<tr>
+		<td colspan="2"><button onclick="reset()">Reset</button></td>
+	</tr>
+</table>
+
+
+	<script>
+	var namaBarang;
+	var hargaBarang;
+	var jumlahBarang;
+	var diskonBarang;
+	var totalHarga;
+	function hitung() {
+		namaBarang = (document.getElementById("ipt_namaBarang").value);
+		hargaBarang = parseFloat(document.getElementById("ipt_hargaBarang").value);
+		jumlahBarang = parseFloat(document.getElementById("ipt_jumlahBarang").value);
+		diskon = parseFloat(document.getElementById("ipt_diskon").value);
+		totalHarga = (hargaBarang * jumlahBarang)-(hargaBarang * jumlahBarang * diskon/100);
+		document.getElementById('opt_namaBarang').value = namaBarang;
+		document.getElementById('opt_hargaBarang').value = hargaBarang;
+		document.getElementById('opt_jumlahBarang').value = jumlahBarang;
+		document.getElementById('opt_diskon').value = diskon+"%";
+		document.getElementById('opt_totalHarga').value = totalHarga;
+	}
+	function reset () {
+	document.getElementById('ipt_namaBarang').value="";
+	document.getElementById('ipt_hargaBarang').value="";
+	document.getElementById('ipt_jumlahBarang').value="";
+	document.getElementById('ipt_diskon').value="";
+	document.getElementById('opt_diskon').value="";
+	document.getElementById('opt_namaBarang').value="";
+	document.getElementById('opt_hargaBarang').value="";
+	document.getElementById('opt_jumlahBarang').value="";
+	document.getElementById('opt_totalHarga').value="";
+	}
+	</script>
+	</body>
+	<body>
+		
+			<div class="footer">
+				<div class="footer-logo">Uci Cookies</div>
+				<div class="footer-list">
+					<ul>
+						<li>Whatsapp: 083160576078</li>
+						<li> Based in Purwokerto </li> 
+					</ul>
+				</div>
+				<div class="footer-item">
+				<p>copyright@ucicookies</P>
+				</div>
+			</div>
+	</body>
+</html>
